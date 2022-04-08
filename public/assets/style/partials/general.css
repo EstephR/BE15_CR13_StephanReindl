@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #353535;
+    font-size: 5vw;
+    letter-spacing: -0.6vw;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 1.3em;
+}
+
+.btn {
+    background: #353535;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+    color: white;
+    transform: scale(1.1);
+}

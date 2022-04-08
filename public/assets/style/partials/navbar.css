@@ -1,0 +1,14 @@
+.navbar {
+    background: white;
+}
+
+.nav-link {
+    color: #353535;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,8 @@
+/* Import Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url("partials/general.css");
+@import url("partials/navbar.css");
+@import url("partials/hero.css");
+@import url("partials/footer.css");
+@import url("partials/index.css");

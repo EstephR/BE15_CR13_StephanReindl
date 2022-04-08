@@ -1,0 +1,12 @@
+.card-header {
+    background: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #353535;
+}
+
+.card-text {
+    color: #353535;
+    font-weight: 900;
+    font-size: 1.2em;
+}
