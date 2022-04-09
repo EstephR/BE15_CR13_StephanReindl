@@ -1,15 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{% for message in app.flashes('notice') %}
-   <div class="alert alert-success h3" id="alert-msg">
-    {{ message }}
-   </div>
-{% endfor %}
-{% include "components/hero.html.twig" %}
-
-<h1 class="mb-5 text-end index-headline">Your Events</h1>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 justify-content-center m-auto mb-5 gap-5">
+<div class="d-flex  align-items-center justify-content-start">
+<h1 class="mb-5 text-start index-headline">All {{events[0].type}}s</h1>
+<a href="/"><button class="btn filter-btn ms-5 mb-5">Go Back</button></a>
+</div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 justify-content-between m-auto mb-5 gap-5">
         {% for event in events %}
         <div class="card border-0 p-0" style="width: 22rem;">
                     <div class="card-header text-center text-dark h3 border-0 mb-4">{{ event.name }}</div>
@@ -21,6 +17,5 @@
                         <a href="/delete/{{ event.id }}"><button class="btn delete">Delete</button></a>
                     </div>           
             </div> 
-        {% endfor %} 
-    </div>
+        {% endfor %}
 {% endblock %}

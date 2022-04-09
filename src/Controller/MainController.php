@@ -87,4 +87,12 @@ class MainController extends AbstractController
         );
         return $this->redirectToRoute('app_main');
     }
+
+    #[Route('/filter/{type}', name: 'main_filter')]
+    public function getTypes(ManagerRegistry $doctrine, $type): Response
+    {
+      $events = $doctrine->getRepository(Events::class)->findBy(['type' => $type]);
+      
+      return $this->render('main/filter.html.twig', ['events' => $events]);
+    }
 }
