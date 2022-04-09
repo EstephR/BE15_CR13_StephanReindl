@@ -1,4 +1,35 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-   details
+<div class="details-container">
+    <img class="icon-details" src="{{asset('assets/img/app.png')}}">
+    <h1 class="details-headline animate__animated animate__fadeInDown animate__slow">{{ event.name }}</h1>
+</div>
+
+ <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 justify-content-between m-auto mb-5 gap-5">
+        <div class="card border-0 p-0" style="width: 30rem;">
+                    <div class="card-header text-start text-dark h3 border-0 animate__animated animate__flipInX animate__delay-1s">{{ event.description }}</div>
+                    <p class="card-header h5 border-0 animate__animated animate__flipInX animate__delay-1s">{{event.date|date('F j, Y')}}, {{event.time|date('g:i a')}}</p>
+                    <img src="{{asset('assets/img/'~ event.imagethumbnail)}}" class="card-img-top d-xl-block d-lg-block d-md-block d-sm-none">
+                    <div class="d-flex justify-content-around p-3 border-0">
+                        <a href="/"><button class="btn details">Back</button></a>
+                        <a href="edit/{{ event.id }}"><button class="btn edit">Edit</button></a>
+                        <a href="delete/{{ event.id }}"><button class="btn delete">Delete</button></a>
+                    </div>           
+        </div>
+        <div class="card border-0 p-0" style="width: 40rem;">
+                    <div class="card-header text-end text-dark h3 border-0">Venue Details</div>
+                    <p class="card-header text-end h5 border-0">{{ event.capacity }} Tickets available</p>
+                    <div class="card-body">
+                     <div class="card-header text-end text-dark h3 border-0 mt-5">Contact</div>
+                       <div class="card-header text-end text-dark border-0">{{ event.email}}</div>
+                       <div class="card-header text-end text-dark border-0">{{ event.phone}}</div>
+                       <div class="card-header text-end text-dark border-0">{{ event.address}}</div>
+                    <div class="d-flex justify-content-end p-3 border-0">
+                        <a href="{{ event.website|replace({'details/':""})}}"><button class="btn details">Go to Website</button></a>
+                    </div>  
+                    </div>         
+        </div>
+</div>
+
+
 {% endblock %}

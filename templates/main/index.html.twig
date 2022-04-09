@@ -5,15 +5,17 @@
 
 <h1 class="mb-5 text-end index-headline">Your Events</h1>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 justify-content-center m-auto mb-5 gap-5">
-        <div class="card border-0 p-0" style="width: 18rem;">
-                    <div class="card-header text-center text-dark h3 border-0 mb-4">Freak Valley</div>
-                    <img src="{{asset('assets/img/card1.png')}}" class="card-img-top d-xl-block d-lg-block d-md-block d-sm-none">
-                    <p class="card-text text-center mt-3">Price: 50 Euro</p>
+        {% for event in events %}
+        <div class="card border-0 p-0" style="width: 22rem;">
+                    <div class="card-header text-center text-dark h3 border-0 mb-4">{{ event.name }}</div>
+                    <img src="{{asset('assets/img/'~ event.imagethumbnail)}}" class="card-img-top d-xl-block d-lg-block d-md-block d-sm-none">
+                    <p class="card-text text-center mt-3">{{event.date|date('F j, Y')}}</p>
                     <div class="d-flex justify-content-around p-3 border-0">
-                        <a href=""><button class="btn details">Details</button></a>
-                        <a href=""><button class="btn edit">Edit</button></a>
-                        <a href=""><button class="btn delete">Delete</button></a>
+                        <a href="details/{{ event.id }}"><button class="btn details">Details</button></a>
+                        <a href="edit/{{ event.id }}"><button class="btn edit">Edit</button></a>
+                        <a href="delete/{{ event.id }}"><button class="btn delete">Delete</button></a>
                     </div>           
-                </div>  
+            </div> 
+        {% endfor %} 
     </div>
 {% endblock %}

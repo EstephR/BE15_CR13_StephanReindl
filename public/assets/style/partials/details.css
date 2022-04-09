@@ -1,0 +1,14 @@
+.details-container {
+    position: relative;
+}
+
+.icon-details {
+    width: 10vw;
+    height: 10vw;
+}
+
+.details-headline {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+}
