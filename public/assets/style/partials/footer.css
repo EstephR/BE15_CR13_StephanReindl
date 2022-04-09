@@ -24,8 +24,8 @@
 
 .icon {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     transition: all .2s ease-in-out;
 }
 
@@ -49,6 +49,6 @@
 }
 
 .icon-overlay-img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }

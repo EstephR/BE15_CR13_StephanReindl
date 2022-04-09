@@ -1,0 +1,19 @@
+@media screen and (max-width: 992px) {
+    .icon {
+        width: 130px;
+        height: 130px;
+    }
+    .icon-overlay-img {
+        width: 35px;
+        height: 35px;
+    }
+    .overlay>h6 {
+        font-size: 1em;
+    }
+    .text-container>p {
+        font-size: 1.7vw;
+    }
+    .card-details {
+        width: 23rem;
+    }
+}

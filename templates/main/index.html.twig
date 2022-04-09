@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+{% for message in app.flashes('notice') %}
+   <div class="alert alert-success h3" id="alert-msg">
+    {{ message }}
+   </div>
+{% endfor %}
 {% include "components/hero.html.twig" %}
 
 <h1 class="mb-5 text-end index-headline">Your Events</h1>
